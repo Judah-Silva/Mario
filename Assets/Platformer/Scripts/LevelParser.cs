@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class LevelParser : MonoBehaviour
 {
-    public string filename;
     public Transform environmentRoot;
-    
     public GameObject rockPrefab;
     public GameObject brickPrefab;
     public GameObject questionBoxPrefab;
     public GameObject stonePrefab;
+    
+    private string filename;
 
     // --------------------------------------------------------------------------
     void Start()
@@ -62,9 +62,19 @@ public class LevelParser : MonoBehaviour
                 // Todo - Instantiate a new GameObject that matches the type specified by letter
                 // Todo - Position the new GameObject at the appropriate location by using row and column
                 // Todo - Parent the new GameObject under levelRoot
+                Vector3 newPos = new Vector3(column + 0.5f, row + 0.5f, 0f);
                 if (letter == 'x')
                 {
-                    Instantiate(rockPrefab, new Vector3(column + 0.5f, row + 0.5f, 0f), Quaternion.identity, environmentRoot);
+                    Instantiate(rockPrefab, newPos, Quaternion.identity, environmentRoot);
+                } else if (letter == 'b')
+                {
+                    Instantiate(brickPrefab, newPos, Quaternion.identity, environmentRoot);
+                } else if (letter == '?')
+                {
+                    Instantiate(questionBoxPrefab, newPos, Quaternion.identity, environmentRoot);
+                } else if (letter == 's')
+                {
+                    Instantiate(stonePrefab, newPos, Quaternion.identity, environmentRoot);
                 }
             }
 
@@ -73,7 +83,7 @@ public class LevelParser : MonoBehaviour
     }
 
     // --------------------------------------------------------------------------
-    private void ReloadLevel()
+    public void ReloadLevel()
     {
         foreach (Transform child in environmentRoot)
         {
