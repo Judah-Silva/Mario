@@ -9,6 +9,10 @@ public class LevelParser : MonoBehaviour
     public GameObject brickPrefab;
     public GameObject questionBoxPrefab;
     public GameObject stonePrefab;
+    public Material questionMarkMat;
+
+    private Vector2 offset = new Vector2(0f, 0.4f);
+    private int repeat = 0;
     
     private string filename;
 
@@ -22,10 +26,27 @@ public class LevelParser : MonoBehaviour
     // --------------------------------------------------------------------------
     void Update()
     {
+        
         if (Input.GetKeyDown(KeyCode.R))
         {
             ReloadLevel();
         }
+        foreach (Transform child in environmentRoot)
+        {
+            if (child.gameObject.CompareTag("Question"))
+            {
+                Renderer renderer = child.gameObject.GetComponent<Renderer>();
+                questionMarkMat.mainTextureOffset = offset;
+                renderer.material = questionMarkMat;
+            }
+        }
+
+        if (repeat % 120 == 0)
+        {
+            offset.y = (offset.y - 0.2f) % 1;
+        }
+
+        repeat++;
     }
 
     // --------------------------------------------------------------------------

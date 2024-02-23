@@ -273,6 +273,7 @@ MonoBehaviour:
   brickPrefab: {fileID: 2652198492393551387, guid: d94221691cf23ce429136e2be05d002b, type: 3}
   questionBoxPrefab: {fileID: 2652198492393551387, guid: 97d0fe6850ab3714eaa654f26f4ca9f8, type: 3}
   stonePrefab: {fileID: 2652198492393551387, guid: e2bf2963d586ea44ea04e84c9ae1fa8e, type: 3}
+  questionMarkMat: {fileID: 2100000, guid: fbe8910ed03d9fa4096ba62faa5637d3, type: 2}
 --- !u!1 &519384242
 GameObject:
   m_ObjectHideFlags: 0
@@ -307,7 +308,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -116.21, y: -21.22}
+  m_AnchoredPosition: {x: -257.1, y: -49}
   m_SizeDelta: {x: 100, y: 50}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &519384244
@@ -579,8 +580,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 86.7, y: -18.67}
-  m_SizeDelta: {x: 100, y: 50}
+  m_AnchoredPosition: {x: 136.7, y: -48.4}
+  m_SizeDelta: {x: 91.6, y: 50}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &766429388
 MonoBehaviour:
@@ -885,6 +886,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerText: {fileID: 2025445062}
+  coinText: {fileID: 1474257826}
   levelParser: {fileID: 406602703}
 --- !u!4 &1335817695
 Transform:
@@ -935,7 +937,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 3.53, y: -33.47}
+  m_AnchoredPosition: {x: -29.1, y: -76.26}
   m_SizeDelta: {x: 100, y: 50}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1474257826
@@ -1069,8 +1071,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 175.92, y: -20.3}
-  m_SizeDelta: {x: 100, y: 50}
+  m_AnchoredPosition: {x: 355.8, y: -49.8}
+  m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &2025445062
 MonoBehaviour:
