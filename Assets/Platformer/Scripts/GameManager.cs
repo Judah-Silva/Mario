@@ -56,7 +56,7 @@ public class GameManager : MonoBehaviour
                 }
             }
         }
-        float horizontalMovement = Input.GetAxis("Horizontal");
+        float horizontalMovement = Input.GetAxis("Camera");
         Vector3 movement = new Vector3(horizontalMovement, 0f, 0f);
         Debug.Log(movement);
         mainCamera.transform.Translate(Time.deltaTime * speed * movement);
